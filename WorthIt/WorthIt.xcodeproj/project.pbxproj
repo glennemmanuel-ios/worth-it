@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		0E5FB7992E17EC8600F312D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E5FB77C2E17EC8400F312D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E5FB7832E17EC8400F312D5;
+			remoteInfo = WorthIt;
+		};
+		0E5FB7A32E17EC8600F312D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0E5FB77C2E17EC8400F312D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0E5FB7832E17EC8400F312D5;
+			remoteInfo = WorthIt;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E5FB7842E17EC8400F312D5 /* WorthIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorthIt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E5FB7982E17EC8600F312D5 /* WorthItTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorthItTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0E5FB7A22E17EC8600F312D5 /* WorthItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorthItUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		0E5FB7AA2E17EC8600F312D5 /* Exceptions for "WorthIt" folder in "WorthIt" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 0E5FB7832E17EC8400F312D5 /* WorthIt */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		0E5FB7862E17EC8400F312D5 /* WorthIt */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				0E5FB7AA2E17EC8600F312D5 /* Exceptions for "WorthIt" folder in "WorthIt" target */,
+			);
+			path = WorthIt;
+			sourceTree = "<group>";
+		};
+		0E5FB79B2E17EC8600F312D5 /* WorthItTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WorthItTests;
+			sourceTree = "<group>";
+		};
+		0E5FB7A52E17EC8600F312D5 /* WorthItUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = WorthItUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E5FB7812E17EC8400F312D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E5FB7952E17EC8600F312D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E5FB79F2E17EC8600F312D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E5FB77B2E17EC8400F312D5 = {
+			isa = PBXGroup;
+			children = (
+				0E5FB7862E17EC8400F312D5 /* WorthIt */,
+				0E5FB79B2E17EC8600F312D5 /* WorthItTests */,
+				0E5FB7A52E17EC8600F312D5 /* WorthItUITests */,
+				0E5FB7852E17EC8400F312D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0E5FB7852E17EC8400F312D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0E5FB7842E17EC8400F312D5 /* WorthIt.app */,
+				0E5FB7982E17EC8600F312D5 /* WorthItTests.xctest */,
+				0E5FB7A22E17EC8600F312D5 /* WorthItUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0E5FB7832E17EC8400F312D5 /* WorthIt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E5FB7AB2E17EC8600F312D5 /* Build configuration list for PBXNativeTarget "WorthIt" */;
+			buildPhases = (
+				0E5FB7802E17EC8400F312D5 /* Sources */,
+				0E5FB7812E17EC8400F312D5 /* Frameworks */,
+				0E5FB7822E17EC8400F312D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0E5FB7862E17EC8400F312D5 /* WorthIt */,
+			);
+			name = WorthIt;
+			packageProductDependencies = (
+			);
+			productName = WorthIt;
+			productReference = 0E5FB7842E17EC8400F312D5 /* WorthIt.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0E5FB7972E17EC8600F312D5 /* WorthItTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E5FB7B02E17EC8600F312D5 /* Build configuration list for PBXNativeTarget "WorthItTests" */;
+			buildPhases = (
+				0E5FB7942E17EC8600F312D5 /* Sources */,
+				0E5FB7952E17EC8600F312D5 /* Frameworks */,
+				0E5FB7962E17EC8600F312D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E5FB79A2E17EC8600F312D5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0E5FB79B2E17EC8600F312D5 /* WorthItTests */,
+			);
+			name = WorthItTests;
+			packageProductDependencies = (
+			);
+			productName = WorthItTests;
+			productReference = 0E5FB7982E17EC8600F312D5 /* WorthItTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0E5FB7A12E17EC8600F312D5 /* WorthItUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E5FB7B32E17EC8600F312D5 /* Build configuration list for PBXNativeTarget "WorthItUITests" */;
+			buildPhases = (
+				0E5FB79E2E17EC8600F312D5 /* Sources */,
+				0E5FB79F2E17EC8600F312D5 /* Frameworks */,
+				0E5FB7A02E17EC8600F312D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0E5FB7A42E17EC8600F312D5 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				0E5FB7A52E17EC8600F312D5 /* WorthItUITests */,
+			);
+			name = WorthItUITests;
+			packageProductDependencies = (
+			);
+			productName = WorthItUITests;
+			productReference = 0E5FB7A22E17EC8600F312D5 /* WorthItUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0E5FB77C2E17EC8400F312D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					0E5FB7832E17EC8400F312D5 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					0E5FB7972E17EC8600F312D5 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 0E5FB7832E17EC8400F312D5;
+					};
+					0E5FB7A12E17EC8600F312D5 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 0E5FB7832E17EC8400F312D5;
+					};
+				};
+			};
+			buildConfigurationList = 0E5FB77F2E17EC8400F312D5 /* Build configuration list for PBXProject "WorthIt" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0E5FB77B2E17EC8400F312D5;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 0E5FB7852E17EC8400F312D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0E5FB7832E17EC8400F312D5 /* WorthIt */,
+				0E5FB7972E17EC8600F312D5 /* WorthItTests */,
+				0E5FB7A12E17EC8600F312D5 /* WorthItUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E5FB7822E17EC8400F312D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E5FB7962E17EC8600F312D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E5FB7A02E17EC8600F312D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0E5FB7802E17EC8400F312D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E5FB7942E17EC8600F312D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0E5FB79E2E17EC8600F312D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0E5FB79A2E17EC8600F312D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E5FB7832E17EC8400F312D5 /* WorthIt */;
+			targetProxy = 0E5FB7992E17EC8600F312D5 /* PBXContainerItemProxy */;
+		};
+		0E5FB7A42E17EC8600F312D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0E5FB7832E17EC8400F312D5 /* WorthIt */;
+			targetProxy = 0E5FB7A32E17EC8600F312D5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E5FB7AC2E17EC8600F312D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WorthIt/WorthIt.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WorthIt/Preview Content\"";
+				DEVELOPMENT_TEAM = 7G9CXT8GAX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorthIt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Worth-It";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.solo.glenn.WorthIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		0E5FB7AD2E17EC8600F312D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = WorthIt/WorthIt.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"WorthIt/Preview Content\"";
+				DEVELOPMENT_TEAM = 7G9CXT8GAX;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = WorthIt/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Worth-It";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.solo.glenn.WorthIt;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		0E5FB7AE2E17EC8600F312D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0E5FB7AF2E17EC8600F312D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0E5FB7B12E17EC8600F312D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G9CXT8GAX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.solo.glenn.WorthItTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorthIt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WorthIt";
+			};
+			name = Debug;
+		};
+		0E5FB7B22E17EC8600F312D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G9CXT8GAX;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.solo.glenn.WorthItTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WorthIt.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WorthIt";
+			};
+			name = Release;
+		};
+		0E5FB7B42E17EC8600F312D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G9CXT8GAX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.solo.glenn.WorthItUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WorthIt;
+			};
+			name = Debug;
+		};
+		0E5FB7B52E17EC8600F312D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7G9CXT8GAX;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.solo.glenn.WorthItUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = WorthIt;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0E5FB77F2E17EC8400F312D5 /* Build configuration list for PBXProject "WorthIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E5FB7AE2E17EC8600F312D5 /* Debug */,
+				0E5FB7AF2E17EC8600F312D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E5FB7AB2E17EC8600F312D5 /* Build configuration list for PBXNativeTarget "WorthIt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E5FB7AC2E17EC8600F312D5 /* Debug */,
+				0E5FB7AD2E17EC8600F312D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E5FB7B02E17EC8600F312D5 /* Build configuration list for PBXNativeTarget "WorthItTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E5FB7B12E17EC8600F312D5 /* Debug */,
+				0E5FB7B22E17EC8600F312D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0E5FB7B32E17EC8600F312D5 /* Build configuration list for PBXNativeTarget "WorthItUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E5FB7B42E17EC8600F312D5 /* Debug */,
+				0E5FB7B52E17EC8600F312D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0E5FB77C2E17EC8400F312D5 /* Project object */;
+}
