@@ -12,18 +12,22 @@ struct ContentView: View {
 
     @Environment(\.modelContext) private var modelContext
     @Query private var items: [FinancialItem]
+    @State private var showDetail = false
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             Text("Hello World")
             .toolbar {
                 ToolbarItem {
                     Button {
-                        print("Add button tapped.")
+                        showDetail = true
                     } label: {
                         Label("Add Item", systemImage: "plus")
                     }
                 }
+            }
+            .sheet(isPresented: $showDetail) {
+                FinancialItemEditView()
             }
         }
     }
