@@ -11,8 +11,8 @@ struct FinancialItemEditView: View {
     
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
-    @State private var selectedType = FinancialItem.AccountType.asset(.liquidAsset)
-    @State private var selectedCategory: String?
+    @State private var selectedType: FinancialItem.AccountType = .asset
+    @State private var selectedCategory: String = "None"
     @State private var name = ""
     @State private var amount: Double = 0.0
     
@@ -30,18 +30,18 @@ struct FinancialItemEditView: View {
             Section("Create New Financial Item") {
                 TextField("Name", text: $name)
                 Picker("Type", selection: $selectedType) {
-                    Text(FinancialItem.AccountType.asset(.liquidAsset).stringValue)
-                        .tag(FinancialItem.AccountType.asset(.liquidAsset))
-                    Text(FinancialItem.AccountType.liability(.others).stringValue)
-                        .tag(FinancialItem.AccountType.liability(.others))
+                    ForEach(FinancialItem.AccountType.allCases, id: \.self) { type in
+                        Text(type.stringValue).tag(type)
+                    }
                 }
                 .pickerStyle(.segmented)
                 .onChange(of: selectedType) {
-                    selectedCategory = nil
+                    selectedCategory = "None"
                 }
                 TextField("Amount", value: $amount, formatter: formatter)
                     .keyboardType(.decimalPad)
                 Picker("Category", selection: $selectedCategory) {
+                    Text("None").tag("None")
                     ForEach(selectedType.categories, id: \.self) {
                         Text($0)
                             .tag($0)

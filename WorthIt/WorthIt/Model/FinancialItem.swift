@@ -39,9 +39,9 @@ class FinancialItem: Identifiable {
 
 extension FinancialItem {
     
-    enum AccountType: Codable, Hashable {
-        case asset(AssetCategory)
-        case liability(LiabilityCategory)
+    enum AccountType: String, CaseIterable, Codable, Hashable {
+        case asset
+        case liability
         
         var stringValue: String {
             switch self {
@@ -58,18 +58,6 @@ extension FinancialItem {
                 return AssetCategory.allCases.map(\.rawValue)
             case .liability:
                 return LiabilityCategory.allCases.map(\.rawValue)
-            }
-        }
-        
-        
-        func hash(into hasher: inout Hasher) {
-            switch self {
-            case .asset(let category):
-                hasher.combine("asset")
-                hasher.combine(category)
-            case .liability(let category):
-                hasher.combine("liability")
-                hasher.combine(category)
             }
         }
         
