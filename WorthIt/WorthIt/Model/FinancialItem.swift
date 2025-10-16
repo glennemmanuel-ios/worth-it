@@ -13,9 +13,19 @@ class FinancialItem: Identifiable {
     
     var id: String
     var label: String
-    var type: AccountType
     var amount: Double
     var category: String?
+    private(set) var typeRaw: String
+    
+    var type: AccountType {
+        get {
+            AccountType(rawValue: typeRaw) ?? .asset
+        }
+        
+        set {
+            typeRaw = newValue.rawValue
+        }
+    }
     
     var formattedAmount: String {
         let formatter = NumberFormatter()
@@ -30,16 +40,16 @@ class FinancialItem: Identifiable {
     init(label: String, type: AccountType, amount: Double, category: String? = nil) {
         self.id = UUID().uuidString
         self.label = label
-        self.type = type
         self.amount = amount
         self.category = category
+        self.typeRaw = type.rawValue
     }
     
 }
 
 extension FinancialItem {
     
-    enum AccountType: String, CaseIterable, Codable, Hashable {
+    enum AccountType: String, CaseIterable, Codable, Hashable, Equatable {
         case asset
         case liability
         
