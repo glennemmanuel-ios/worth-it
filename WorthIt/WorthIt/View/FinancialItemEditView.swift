@@ -16,6 +16,15 @@ struct FinancialItemEditView: View {
     @State private var name = ""
     @State private var amount: Double = 0.0
     
+    private var formatter: NumberFormatter {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencySymbol = "PHP"
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 0
+        return formatter
+    }
+    
     var body: some View {
         Form {
             Section("Create New Financial Item") {
@@ -30,7 +39,7 @@ struct FinancialItemEditView: View {
                 .onChange(of: selectedType) {
                     selectedCategory = nil
                 }
-                TextField("Amount", text: .constant(""))
+                TextField("Amount", value: $amount, formatter: formatter)
                     .keyboardType(.decimalPad)
                 Picker("Category", selection: $selectedCategory) {
                     ForEach(selectedType.categories, id: \.self) {
@@ -54,13 +63,13 @@ struct FinancialItemEditView: View {
     }
     
     private func saveItem() {
-//        let item = FinancialItem(
-//            label: name,
-//            type: selectedType,
-//            amount: amount,
-//            category: selectedCategory)
-//        
-//        context.insert(item)
+        let item = FinancialItem(
+            label: name,
+            type: selectedType,
+            amount: amount,
+            category: selectedCategory)
+        
+        context.insert(item)
         dismiss()
     }
     

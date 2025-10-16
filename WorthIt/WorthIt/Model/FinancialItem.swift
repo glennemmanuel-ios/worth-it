@@ -17,6 +17,16 @@ class FinancialItem: Identifiable {
     var amount: Double
     var category: String?
     
+    var formattedAmount: String {
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .currency
+        formatter.currencySymbol = "PHP"
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 0
+        
+        return formatter.string(from: NSNumber(value: amount)) ?? "N/A"
+    }
+    
     init(label: String, type: AccountType, amount: Double, category: String? = nil) {
         self.id = UUID().uuidString
         self.label = label
