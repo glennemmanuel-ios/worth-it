@@ -12,51 +12,48 @@ struct DashboardView: View {
 
     @Environment(\.modelContext) private var modelContext
     
+    @Query private var allItems: [FinancialItem]
+    
     @Query(filter: #Predicate<FinancialItem> {
         $0.typeRaw == "asset"
     })
-    var assets: [FinancialItem]
+    private var assets: [FinancialItem]
     
     @Query(filter: #Predicate<FinancialItem> {
         $0.typeRaw == "liability"
     })
-    var liabilities: [FinancialItem]
+    private var liabilities: [FinancialItem]
     
     @StateObject private var viewModel = ViewModel()
     @State private var showDetail = false
+    @State private var selectedFilter: Filter = .all
     
     var body: some View {
         NavigationStack {
             VStack {
+                Picker("Filter", selection: $selectedFilter) {
+                    ForEach(Filter.allCases, id: \.self) { filter in
+                        Text(filter.displayString)
+                            .tag(filter.displayString)
+                    }
+                }
+                .padding()
+                .pickerStyle(.segmented)
+                .onChange(of: selectedFilter) {
+                    print("filter change")
+                }
                 List {
-                    Section(header: Text("Assets")) {
-                        ForEach(assets) { item in
-                            VStack(alignment: .leading) {
-                                Text(item.label)
-                                Text(item.formattedAmount)
-                                Text(item.type.stringValue)
-                                Text(item.category ?? "N/A")
-                            }
-                        }
-                        .onDelete { indices in
-                            for index in indices {
-                                deleteItem(assets[index])
-                            }
+                    ForEach(getList()) { item in
+                        VStack(alignment: .leading) {
+                            Text(item.label)
+                            Text(item.formattedAmount)
+                                .foregroundStyle(item.type == .liability ? Color(.red) : Color(.green))
+                            Text(item.category ?? "N/A")
                         }
                     }
-                    Section(header: Text("Liabilities")) {
-                        ForEach(liabilities) { item in
-                            VStack(alignment: .leading) {
-                                Text(item.label)
-                                Text(item.formattedAmount)
-                                Text(item.type.stringValue)
-                                Text(item.category ?? "N/A")
-                            }
-                        }
-                        .onDelete { indices in
-                            for index in indices {
-                                deleteItem(liabilities[index])
-                            }
+                    .onDelete { indices in
+                        for index in indices {
+                            deleteItem(assets[index])
                         }
                     }
                 }
@@ -73,6 +70,7 @@ struct DashboardView: View {
             .sheet(isPresented: $showDetail) {
                 FinancialItemEditView()
             }
+            .navigationTitle("My Net Worth")
         }
     }
     
@@ -81,7 +79,37 @@ struct DashboardView: View {
         try? modelContext.save()
     }
     
+    private func getList() -> [FinancialItem] {
+        switch selectedFilter {
+        case .all:
+            return allItems
+        case .assets:
+            return assets
+        case .liabilities:
+            return liabilities
+        }
+    }
+    
 }
+
+extension DashboardView {
+    
+    enum Filter: String, CaseIterable, Codable, Hashable, Equatable {
+        case all
+        case assets
+        case liabilities
+        
+        var displayString: String {
+            switch self {
+            case .all: return "All"
+            case .assets: return "Assets"
+            case .liabilities: return "Liabilities"
+            }
+        }
+    }
+    
+}
+
 
 #Preview {
     DashboardView()
