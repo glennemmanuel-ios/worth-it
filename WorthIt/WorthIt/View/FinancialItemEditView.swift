@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FinancialItemEditView: View {
     
+    var financialItem: FinancialItem?
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
     @State private var selectedType: FinancialItem.AccountType = .asset
@@ -60,15 +61,31 @@ struct FinancialItemEditView: View {
             .buttonStyle(.glassProminent)
             .padding([.horizontal, .bottom])
         }
+        .onAppear {
+            if let financialItem {
+                name = financialItem.label
+                selectedType = financialItem.type
+                amount = financialItem.amount
+                selectedCategory = financialItem.category ?? "None"
+            }
+        }
     }
     
     private func saveItem() {
-        let item = FinancialItem(
-            label: name,
-            type: selectedType,
-            amount: amount,
-            category: selectedCategory)
-        
+        var item: FinancialItem
+        if let financialItem = financialItem {
+            financialItem.label = name
+            financialItem.type = selectedType
+            financialItem.amount = amount
+            financialItem.category = selectedCategory
+            item = financialItem
+        } else {
+            item = FinancialItem(
+                label: name,
+                type: selectedType,
+                amount: amount,
+                category: selectedCategory)
+        }
         context.insert(item)
         dismiss()
     }

@@ -27,6 +27,7 @@ struct DashboardView: View {
     @StateObject private var viewModel = ViewModel()
     @State private var showDetail = false
     @State private var selectedFilter: Filter = .all
+    @State private var selectedFinancialItem: FinancialItem? = nil
     
     var body: some View {
         NavigationStack {
@@ -93,6 +94,11 @@ struct DashboardView: View {
                                 .foregroundStyle(item.type == .liability ? Color(.red) : Color(.green))
                             Text(item.category ?? "N/A")
                         }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            selectedFinancialItem = item
+                        }
                     }
                     .onDelete { indices in
                         for index in indices {
@@ -111,8 +117,11 @@ struct DashboardView: View {
                 }
             }
             .sheet(isPresented: $showDetail) {
-                FinancialItemEditView()
+                FinancialItemEditView(financialItem: nil)
             }
+            .sheet(item: $selectedFinancialItem, content: { item in
+                FinancialItemEditView(financialItem: item)
+            })
             .navigationTitle("My Net Worth")
         }
     }
