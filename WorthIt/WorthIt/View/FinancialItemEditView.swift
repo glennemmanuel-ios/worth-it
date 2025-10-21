@@ -27,7 +27,7 @@ struct FinancialItemEditView: View {
     
     var body: some View {
         Form {
-            Section("Create New Financial Item") {
+            Section("Add New Entry") {
                 TextField("Name", text: $name)
                 Picker("Type", selection: $selectedType) {
                     ForEach(FinancialItem.AccountType.allCases, id: \.self) { type in

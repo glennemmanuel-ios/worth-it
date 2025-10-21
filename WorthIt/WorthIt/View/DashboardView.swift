@@ -31,6 +31,52 @@ struct DashboardView: View {
     var body: some View {
         NavigationStack {
             VStack {
+                VStack {
+                    RoundedRectangle(cornerRadius: 8)
+                        .foregroundColor(.secondary)
+                        .shadow(radius: 8)
+                        .overlay {
+                            VStack {
+                                Text("Total Net Worth")
+                                    .foregroundStyle(Color(.white))
+                                    .fontWeight(.semibold)
+                                Text(getTotalNetWorth().formatted())
+                                    .foregroundStyle(Color(.white))
+                                    .font(.largeTitle)
+                                    .fontWeight(.bold)
+                            }
+                        }
+                    HStack {
+                        RoundedRectangle(cornerRadius: 8)
+                            .foregroundColor(.green)
+                            .shadow(radius: 8)
+                            .overlay {
+                                VStack {
+                                    Text("Assets")
+                                        .foregroundStyle(Color(.white))
+                                        .fontWeight(.semibold)
+                                    Text(getTotal(.assets).formatted())
+                                        .foregroundStyle(Color(.white))
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+                                }
+                            }
+                        RoundedRectangle(cornerRadius: 8)
+                            .foregroundColor(.red)
+                            .overlay {
+                                VStack {
+                                    Text("Liabilities")
+                                        .foregroundStyle(Color(.white))
+                                        .fontWeight(.semibold)
+                                    Text(getTotal(.liabilities).formatted())
+                                        .foregroundStyle(Color(.white))
+                                        .font(.title2)
+                                        .fontWeight(.bold)
+                                }
+                            }
+                    }
+                }
+                .padding()
                 Picker("Filter", selection: $selectedFilter) {
                     ForEach(Filter.allCases, id: \.self) { filter in
                         Text(filter.displayString)
@@ -39,9 +85,6 @@ struct DashboardView: View {
                 }
                 .padding()
                 .pickerStyle(.segmented)
-                .onChange(of: selectedFilter) {
-                    print("filter change")
-                }
                 List {
                     ForEach(getList()) { item in
                         VStack(alignment: .leading) {
@@ -88,6 +131,30 @@ struct DashboardView: View {
         case .liabilities:
             return liabilities
         }
+    }
+    
+    private func getTotalNetWorth() -> Double {
+        let totalAssets = getTotal(.assets)
+        let totalLiabilities = getTotal(.liabilities)
+        let totalNetWorth = totalAssets - totalLiabilities
+        return totalNetWorth
+    }
+    
+    private func getTotal(_ filter: Filter) -> Double {
+        var items = [FinancialItem]()
+        var totalAmount = 0.0
+        switch filter {
+        case .assets:
+            items = self.assets
+        case .liabilities:
+            items = self.liabilities
+        default:
+            break
+        }
+        items.forEach { item in
+            totalAmount += item.amount
+        }
+        return totalAmount
     }
     
 }
