@@ -32,7 +32,3 @@ struct RemoteImage: View {
         }
     }
 }
-
-#Preview {
-    RemoteImage(url: URL(string: "https://s3.amazonaws.com/mz-platform-assets/locations/deathstar/Degobah.jpg")!)
-}
